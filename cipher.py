@@ -9,10 +9,12 @@ for i in range(0, 26):
         
     
 cipher_message = ''
-for letter in message:
-        if letter in shifted_alphbet:
-            letter = shifted_alphbet[letter]
-            cipher_message = cipher_message + letter
+for chr in message:
+        if chr in shifted_alphbet:
+            chr = shifted_alphbet[chr]
+            cipher_message = cipher_message + chr
+        elif chr not in shifted_alphbet and chr != " ":
+            cipher_message = cipher_message + chr              
         else:
             cipher_message = cipher_message + " "
 
